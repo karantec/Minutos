@@ -1,7 +1,7 @@
 // src/services/api.ts
 import { SignupFormData } from '@/types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://bakcend-n9kq.onrender.com';
+const API_BASE_URL = 'https://bakcend-n9kq.onrender.com';
 
 export const signupMerchant = async (formData: SignupFormData): Promise<any> => {
   const response = await fetch(`${API_BASE_URL}/User/Create`, {

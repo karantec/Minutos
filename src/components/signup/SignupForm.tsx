@@ -1,3 +1,5 @@
+"use client"
+
 // src/components/signup/SignupForm.tsx
 import React, { useState } from 'react';
 import PersonalDetailsForm from './PersonalDetailsForm';
@@ -54,7 +56,7 @@ const SignupForm: React.FC = () => {
     
     try {
       // Replace with your actual API endpoint
-      const response = await fetch('https://api.kiranapro.com/merchants/signup', {
+      const response = await fetch('https://bakcend-n9kq.onrender.com/User/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +84,7 @@ const SignupForm: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto bg-white rounded-lg p-8 shadow-sm">
       <h1 className="text-2xl font-bold text-center text-gray-800 mb-2">
-        KiranaPro Merchant Signup
+        Minutos Merchant Signup
       </h1>
       <p className="text-center text-gray-600 mb-6">
         Please enter your details below
@@ -91,7 +93,7 @@ const SignupForm: React.FC = () => {
       {submitSuccess ? (
         <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
           <p className="font-bold">Registration Successful!</p>
-          <p>Thank you for registering with KiranaPro. We'll be in touch shortly.</p>
+          <p>Thank you for registering with Minutos. We'll be in touch shortly.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -112,7 +114,7 @@ const SignupForm: React.FC = () => {
               <label htmlFor="nominateForAwards" className="text-gray-700">
                 <span className="flex items-center">
                   <span role="img" aria-label="trophy" className="mr-1">🏆</span>
-                  Nominate for Kirana Awards
+                  Nominate for Minutos Awards
                 </span>
               </label>
             </div>
