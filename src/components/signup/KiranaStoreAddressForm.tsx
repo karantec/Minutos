@@ -16,7 +16,7 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
 }) => {
   return (
     <div className="mb-6">
-      <h2 className="text-lg font-medium mb-4 text-gray-700">Enter Kirana Store Address</h2>
+      <h2 className="text-lg font-medium mb-4 text-gray-700">Enter Minutos Store Address</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <input

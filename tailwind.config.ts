@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'kirana-green': {
-          DEFAULT: '#0A8943',
+          DEFAULT: '#E41E25',
           light: '#C4EBD4',
         },
       },

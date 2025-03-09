@@ -5,8 +5,8 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'KiranaPro - Merchant Signup',
-  description: 'India\'s Neighborhood Shopping App',
+  title: 'Minutos - A Local Delivery Shop',
+  description: 'India\'s Neighborhood Delivery App',
 };
 
 export default function RootLayout({

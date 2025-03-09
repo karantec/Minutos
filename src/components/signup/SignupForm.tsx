@@ -53,7 +53,7 @@ const SignupForm: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto bg-white rounded-lg p-8 shadow-sm">
       <h1 className="text-2xl font-bold text-center text-gray-800 mb-2">
-        KiranaPro Merchant Signup
+        Minutos Merchant Signup
       </h1>
       <p className="text-center text-gray-600 mb-6">
         Please enter your details below
