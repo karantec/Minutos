@@ -4,14 +4,25 @@ import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
+  fullWidth?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, fullWidth = false }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow bg-kirana-green-light bg-opacity-30 py-10">
-        {children}
+        {fullWidth ? (
+          // Full width content without horizontal constraints
+          <div className="w-full">
+            {children}
+          </div>
+        ) : (
+          // Regular content with horizontal padding and max width
+          <div className="max-w-screen-xl mx-auto px-4">
+            {children}
+          </div>
+        )}
       </main>
       <Footer />
     </div>

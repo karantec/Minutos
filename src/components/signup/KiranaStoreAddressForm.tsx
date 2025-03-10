@@ -2,6 +2,8 @@ import React from 'react';
 
 interface KiranaStoreAddressFormProps {
   formData: {
+    area: string;
+    landmark: string;
     streetAddress: string;
     city: string;
     state: string;
@@ -18,6 +20,35 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
     <div className="mb-6">
       <h2 className="text-lg font-medium mb-4 text-gray-700">Enter Minutos Store Address</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <div>
+          <input
+            type="text"
+            id="area"
+            name="area"
+            value={formData.area}
+            onChange={handleChange}
+            placeholder="AREA"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            id="landmark"
+            name="landmark"
+            value={formData.landmark}
+            onChange={handleChange}
+            placeholder="Land Mark"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            required
+          />
+        </div>
+
+
+
         <div>
           <input
             type="text"
@@ -66,6 +97,8 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             required
           />
         </div>
+
+        
       </div>
     </div>
   );

@@ -71,18 +71,7 @@ const Footer: React.FC = () => {
           {/* Quick Links and Social Media */}
           <div className="flex flex-col">
             <h3 className="font-semibold text-lg mb-3 md:mb-4 border-b border-white/20 pb-2">Quick Links</h3>
-            <ul className="space-y-2 mb-6">
-              <li>
-                <Link href="/stores" className="hover:underline text-white/80 hover:text-white transition-colors duration-200 text-sm md:text-base">
-                  Bright Stores
-                </Link>
-              </li>
-              <li>
-                <Link href="/merchants" className="hover:underline text-white/80 hover:text-white transition-colors duration-200 text-sm md:text-base">
-                  Merchants
-                </Link>
-              </li>
-            </ul>
+            
             
             <h3 className="font-semibold text-lg mb-3 md:mb-4 border-b border-white/20 pb-2">Social Media</h3>
             <ul className="space-y-2 flex flex-col md:flex-row md:space-y-0 md:space-x-4">
@@ -116,9 +105,10 @@ const Footer: React.FC = () => {
         
         {/* Bottom Section */}
         <div className="mt-12 md:mt-16 pt-6 border-t border-white/20 flex flex-col md:flex-row md:justify-between items-center">
-          <h2 className="text-8xl md:text-8xl font-light opacity-25 mb-4 md:mb-0">Minutos</h2>
-          <p className="text-sm text-white/70">©2025 Minutos Pvt Ltd. All rights reserved</p>
+        <img src="/images/logo1.jpg" alt="Minutos Logo" className="h-16 md:h-20 opacity-75 mb-4 md:mb-0" />
+        <p className="text-sm text-white/70">©2025 Minutos Pvt Ltd. All rights reserved</p>
         </div>
+
       </div>
     </footer>
   );

@@ -103,29 +103,18 @@ const Header: React.FC = () => {
             isHeaderCompact ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'
           }`}>
             <Image 
-              src="/images/logo.jpg" 
+              src="/images/logo1.jpg" 
               alt="Minutos Logo" 
               fill
               className="object-contain"
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <div>
-              <span className={`font-bold transition-all duration-300 ${
-                isHeaderCompact ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'
-              }`}>Minutos</span>
-        
-            </div>
-            <p className={`text-xs sm:text-sm -mt-1 transition-opacity duration-300 ${
-              isHeaderCompact && windowWidth < 640 ? 'opacity-0 h-0' : 'opacity-100'
-            }`}>A Local Delivery Shop</p>
-          </div>
         </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="/about-us" className="hover:underline transition-colors duration-200 font-medium">
+          <Link href="/about" className="hover:underline transition-colors duration-200 font-medium">
             About us
           </Link>
           
@@ -165,7 +154,7 @@ const Header: React.FC = () => {
       >
         <div className="flex flex-col space-y-4 p-4">
           <Link 
-            href="/about-us" 
+            href="/about" 
             className="hover:underline py-2 transition-colors duration-200 flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >

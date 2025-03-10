@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Script from 'next/script';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 // Load Inter font with extended Latin character support
 const inter = Inter({ 
@@ -12,39 +14,39 @@ const inter = Inter({
 
 // Comprehensive metadata configuration
 export const metadata: Metadata = {
-  metadataBase: new URL('https://minutos.example.com'), // Replace with your actual domain
+  metadataBase: new URL('https://kiranapro.example.com'), // Replace with your actual domain
   title: {
-    template: '%s | Minutos - A Local Delivery Shop',
-    default: 'Minutos - A Local Delivery Shop',
+    template: '%s | KiranaPro - Empowering Retailers',
+    default: 'KiranaPro - Empowering Retailers',
   },
-  description: 'India\'s fastest neighborhood delivery app. Get groceries, food, and essentials delivered in minutes.',
-  keywords: ['delivery app', 'local delivery', 'fast delivery', 'India delivery', 'grocery delivery', 'food delivery'],
-  authors: [{ name: 'Minutos Team' }],
-  creator: 'Minutos',
-  publisher: 'Minutos Inc.',
-  applicationName: 'Minutos',
+  description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
+  keywords: ['kirana stores', 'retail transformation', 'digital solutions', 'Indian retail', 'retail growth', 'small business empowerment'],
+  authors: [{ name: 'KiranaPro Team' }],
+  creator: 'KiranaPro',
+  publisher: 'KiranaPro Inc.',
+  applicationName: 'KiranaPro',
   generator: 'Next.js',
   formatDetection: {
     telephone: true,
     email: true,
     address: true,
   },
-  category: 'ecommerce',
+  category: 'business',
   
   // Open Graph metadata for social sharing
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://minutos.example.com',
-    title: 'Minutos - A Local Delivery Shop',
-    description: 'India\'s fastest neighborhood delivery app. Get groceries, food, and essentials delivered in minutes.',
-    siteName: 'Minutos',
+    url: 'https://kiranapro.example.com',
+    title: 'KiranaPro - Empowering Retailers',
+    description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
+    siteName: 'KiranaPro',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Minutos - Local Delivery',
+        alt: 'KiranaPro - Empowering Retailers',
       },
     ],
   },
@@ -52,9 +54,9 @@ export const metadata: Metadata = {
   // Twitter card metadata
   twitter: {
     card: 'summary_large_image',
-    title: 'Minutos - A Local Delivery Shop',
-    description: 'India\'s fastest neighborhood delivery app. Get groceries, food, and essentials delivered in minutes.',
-    creator: '@MinutosApp',
+    title: 'KiranaPro - Empowering Retailers',
+    description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
+    creator: '@KiranaProApp',
     images: ['/images/twitter-image.jpg'],
   },
   
@@ -77,10 +79,10 @@ export const metadata: Metadata = {
   
   // Add alternate languages if you have multilingual support
   alternates: {
-    canonical: 'https://minutos.example.com',
+    canonical: 'https://kiranapro.example.com',
     languages: {
-      'en-US': 'https://minutos.example.com/en-us',
-      'hi-IN': 'https://minutos.example.com/hi-in',
+      'en-US': 'https://kiranapro.example.com/en-us',
+      'hi-IN': 'https://kiranapro.example.com/hi-in',
       // Add more languages as needed
     },
   },
@@ -128,9 +130,13 @@ export default function RootLayout({
           Skip to main content
         </a>
         
+        <Header />
+        
         <main id="main-content">
           {children}
         </main>
+        
+        <Footer />
         
         {/* Structured data for rich results */}
         <Script
@@ -140,13 +146,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'Minutos',
-              url: 'https://minutos.example.com',
-              logo: 'https://minutos.example.com/images/logo.png',
+              name: 'KiranaPro',
+              url: 'https://kiranapro.example.com',
+              logo: 'https://kiranapro.example.com/images/logo.png',
               sameAs: [
-                'https://www.facebook.com/MinutosApp',
-                'https://www.instagram.com/MinutosApp',
-                'https://twitter.com/MinutosApp',
+                'https://www.facebook.com/KiranaProApp',
+                'https://www.instagram.com/KiranaProApp',
+                'https://twitter.com/KiranaProApp',
               ],
               contactPoint: {
                 '@type': 'ContactPoint',
