@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
         
         {/* Bottom Section */}
         <div className="mt-12 md:mt-16 pt-6 border-t border-white/20 flex flex-col md:flex-row md:justify-between items-center">
-          <h2 className="text-4xl md:text-6xl font-light opacity-25 mb-4 md:mb-0">Minutos</h2>
+          <h2 className="text-8xl md:text-8xl font-light opacity-25 mb-4 md:mb-0">Minutos</h2>
           <p className="text-sm text-white/70">©2025 Minutos Pvt Ltd. All rights reserved</p>
         </div>
       </div>
