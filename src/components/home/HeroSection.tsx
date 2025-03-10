@@ -32,7 +32,7 @@ const HeroSection = () => {
           <div
             key={image}
             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              index === currentBgIndex ? "opacity-70" : "opacity-0"
+              index === currentBgIndex ? "opacity-100" : "opacity-0"
             }`}
           >
             <div className="absolute inset-0 " />

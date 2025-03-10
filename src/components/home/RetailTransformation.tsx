@@ -83,23 +83,7 @@ const RetailTransformation = () => {
           </div>
         </div>
         
-        {/* Stage Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {stages.map((stage, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
-              <div className={`flex justify-center mb-4 ${stage.iconClass}`}>
-                {stage.icon}
-              </div>
-              <h3 className="text-lg font-bold text-center mb-3">{stage.name}</h3>
-              <p className="text-center text-gray-600">{stage.description}</p>
-              {index < stages.length - 1 && (
-                <div className="flex justify-center mt-4 md:hidden">
-                  <ArrowRightIcon />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        
         
       </div>
     </section>

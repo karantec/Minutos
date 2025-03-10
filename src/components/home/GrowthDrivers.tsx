@@ -68,7 +68,7 @@ const GrowthDrivers = () => {
   return (
     <div className="max-w-3xl mx-auto rounded-lg shadow-lg p-6 my-8">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800">Growth Drivers</h2>
+        <h2 className="text-3xl font-bold text-gray-800">FAQ</h2>
         <p className="mt-2 text-gray-600">Understanding what propels our business forward</p>
       </div>
       

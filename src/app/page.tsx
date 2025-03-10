@@ -12,8 +12,8 @@ export default function HomePage() {
         <HeroSection />
         <EmpoweringCommunities />
         <RetailEvolution />
-        <GrowthDrivers />
         <RetailTransformation />
+        <GrowthDrivers />
       </main>
     </div>
   );
