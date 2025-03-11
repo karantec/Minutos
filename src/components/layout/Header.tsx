@@ -99,18 +99,20 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo and Brand */}
         <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-          <div className={`relative transition-all duration-300 ${
-            isHeaderCompact ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'
-          }`}>
-            <Image 
-              src="/images/logo1.jpg" 
-              alt="Minutos Logo" 
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </Link>
+  <div className={`relative transition-all duration-300 ${
+    isHeaderCompact ? 'w-20 h-20 sm:w-20 sm:h-20' : 'w-16 h-16 sm:w-20 sm:h-20'
+  }`}>
+    <Image 
+      src="/images/minuteswhie.png" 
+      alt="Minutos Logo" 
+      
+      fill
+      className="object-contain"
+      priority
+    />
+  </div>
+</Link>
+
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">

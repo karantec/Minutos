@@ -11,7 +11,6 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSection />
         <EmpoweringCommunities />
-        <RetailEvolution />
         <RetailTransformation />
         <GrowthDrivers />
       </main>

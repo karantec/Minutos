@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start col-span-2 sm:col-span-2 md:col-span-1 mb-6 md:mb-0">
             <div className="bg-green-100 ">
-              <div className="relative w-16 h-16">
+              <div className="relative w-20 h-20">
                 <Image 
-                  src="/images/logo.jpg" 
+                  src="/images/minitos.png" 
                   alt="Minutos Logo" 
                   fill
                   className="object-contain"
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
         
         {/* Bottom Section */}
         <div className="mt-12 md:mt-16 pt-6 border-t border-white/20 flex flex-col md:flex-row md:justify-between items-center">
-        <img src="/images/logo1.jpg" alt="Minutos Logo" className="h-16 md:h-20 opacity-75 mb-4 md:mb-0" />
+        <img src="/images/minuteswhie.png" alt="Minutos Logo" className="h-16 md:h-20 opacity-75 mb-4 md:mb-0" />
         <p className="text-sm text-white/70">©2025 Minutos Pvt Ltd. All rights reserved</p>
         </div>
 

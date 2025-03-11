@@ -5,18 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
-  const backgroundImages = [
-    "/images/hero-section-banner/2.png",
-    "/images/hero-section-banner/3.png",
-    "/images/hero-section-banner/5.png",
-  ];
-
+  const backgroundImages = ["/images/2.png", "/images/4.png", "/images/6.png"];
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
   useEffect(() => {
-    // Auto-slide background images every 5 seconds
     const interval = setInterval(() => {
-      setCurrentBgIndex((prevIndex) => 
+      setCurrentBgIndex((prevIndex) =>
         prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
@@ -25,9 +19,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen flex flex-col justify-center items-center">
       {/* Sliding Background Images */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute top-0 w-full h-[80%] overflow-hidden">
         {backgroundImages.map((image, index) => (
           <div
             key={image}
@@ -35,7 +29,6 @@ const HeroSection = () => {
               index === currentBgIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="absolute inset-0 " />
             <Image
               src={image}
               alt={`Background ${index + 1}`}
@@ -47,7 +40,20 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Sliding indicator dots */}
+      {/* Hero Content */}
+      <div className="absolute top-[60%] w-full text-center text-white z-10">
+        <h1 className="text-5xl font-bold drop-shadow-lg">Welcome to Minitos</h1>
+        <p className="text-lg mt-4 drop-shadow-md">
+          Experience the best services with us. Join now!
+        </p>
+        <Link href="/signup-form">
+          <button className="mt-6 bg-red-400 bg-opacity-30 backdrop-blur-lg hover:bg-red-700 hover:bg-opacity-50 text-white text-xl px-6 py-3 rounded-full transition border border-white/20">
+            Get Started
+          </button>
+        </Link>
+      </div>
+
+      {/* Sliding Indicator Dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {backgroundImages.map((_, index) => (
           <button
