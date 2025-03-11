@@ -5,6 +5,7 @@ import GrowthDrivers from "@/components/home/GrowthDrivers";
 
 import RetailTransformation from "@/components/home/RetailTransformation";
 import EmpoweringCommunities from "@/components/home/EmpoweringCommunities";
+import Link from "next/link";
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -36,11 +37,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <p className="text-white/90 mb-8 text-lg">
             Connecting local stores to digital shoppers across India
           </p>
-          <button 
+         <Link href ="/signup-form"> <button 
             className="px-8 py-4 bg-white text-red-600 font-bold text-lg rounded-lg hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl"
           >
             Join us for free
           </button>
+          </Link>
         </div>
       </div>
     </div>
