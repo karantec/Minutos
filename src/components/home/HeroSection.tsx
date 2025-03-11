@@ -2,65 +2,78 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const HeroSection = () => {
-  const backgroundImages = ["/images/2.png", "/images/4.png", "/images/6.png"];
-  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  const slides = [
+    {
+      image: "/images/1.png",
+      title: "OTT PLATFORMS AT THE CHEAPEST PRICE!",
+      subtitle: "Stream your favorite content with premium subscriptions",
+    },
+    {
+      image: "/images/2.png",
+      title: "Minutos: Freshness Delivered, Fast and Local.",
+      subtitle: "From your local stores to your doorstep in minutes.",
+    },
+    {
+      image: "/images/3.png",
+      title: "Minutos: Freshness Delivered, Fast and Local.",
+      subtitle: "From your local stores to your doorstep in minutes.",
+    },
+  ];
+
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBgIndex((prevIndex) =>
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+      setCurrentSlideIndex((prevIndex) =>
+        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center">
-      {/* Sliding Background Images */}
-      <div className="absolute top-0 w-full h-[80%] overflow-hidden">
-        {backgroundImages.map((image, index) => (
+    <section className="relative w-full h-96">
+      {/* Slides Container */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {slides.map((slide, index) => (
           <div
-            key={image}
+            key={slide.image}
             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              index === currentBgIndex ? "opacity-100" : "opacity-0"
+              index === currentSlideIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
             <Image
-              src={image}
-              alt={`Background ${index + 1}`}
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority={index === 0}
             />
+            <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24">
+              <div className="max-w-2xl">
+                <h1 className="text-white text-2xl sm:text-md md:text-4xl lg:text-5xl font-bold mb-4">
+                  {slide.title || "OTT PLATFORMS AT THE CHEAPEST PRICE!"}
+                </h1>
+                <p className="text-white text-lg sm:text-md md:text-2xl">
+                  {slide.subtitle || "Stream your favorite content with premium subscriptions"}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Hero Content */}
-      <div className="absolute top-[60%] w-full text-center text-white z-10">
-        <h1 className="text-5xl font-bold drop-shadow-lg">Welcome to Minitos</h1>
-        <p className="text-lg mt-4 drop-shadow-md">
-          Experience the best services with us. Join now!
-        </p>
-        <Link href="/signup-form">
-          <button className="mt-6 bg-red-400 bg-opacity-30 backdrop-blur-lg hover:bg-red-700 hover:bg-opacity-50 text-white text-xl px-6 py-3 rounded-full transition border border-white/20">
-            Get Started
-          </button>
-        </Link>
-      </div>
-
       {/* Sliding Indicator Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
-        {backgroundImages.map((_, index) => (
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+        {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentBgIndex(index)}
+            onClick={() => setCurrentSlideIndex(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentBgIndex ? "bg-white" : "bg-white/50"
+              index === currentSlideIndex ? "bg-white" : "bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
