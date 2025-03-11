@@ -7,8 +7,7 @@ const HeroSection = () => {
   const slides = [
     {
       image: "/images/1.png",
-      title: "OTT PLATFORMS AT THE CHEAPEST PRICE!",
-      subtitle: "Stream your favorite content with premium subscriptions",
+     
     },
     {
       image: "/images/2.png",
