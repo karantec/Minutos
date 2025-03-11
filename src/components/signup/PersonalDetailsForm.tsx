@@ -26,7 +26,7 @@ const PersonalDetailsForm: React.FC<PersonalDetailsFormProps> = ({
             value={formData.firstName}
             onChange={handleChange}
             placeholder="First Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -38,7 +38,7 @@ const PersonalDetailsForm: React.FC<PersonalDetailsFormProps> = ({
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Last Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -50,7 +50,7 @@ const PersonalDetailsForm: React.FC<PersonalDetailsFormProps> = ({
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -62,7 +62,7 @@ const PersonalDetailsForm: React.FC<PersonalDetailsFormProps> = ({
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>

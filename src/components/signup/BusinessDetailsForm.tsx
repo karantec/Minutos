@@ -24,7 +24,7 @@ const BusinessDetailsForm: React.FC<BusinessDetailsFormProps> = ({
             value={formData.businessName}
             onChange={handleChange}
             placeholder="Business Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -36,7 +36,7 @@ const BusinessDetailsForm: React.FC<BusinessDetailsFormProps> = ({
             value={formData.businessType}
             onChange={handleChange}
             placeholder="Type of Business"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>

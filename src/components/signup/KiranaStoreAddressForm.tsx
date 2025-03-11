@@ -28,24 +28,13 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             name="area"
             value={formData.area}
             onChange={handleChange}
-            placeholder="AREA"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            placeholder="House Number and Area"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
 
-        <div>
-          <input
-            type="text"
-            id="landmark"
-            name="landmark"
-            value={formData.landmark}
-            onChange={handleChange}
-            placeholder="Land Mark"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
-            required
-          />
-        </div>
+        
 
 
 
@@ -57,7 +46,19 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             value={formData.streetAddress}
             onChange={handleChange}
             placeholder="Street Address"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            id="landmark"
+            name="landmark"
+            value={formData.landmark}
+            onChange={handleChange}
+            placeholder="Land Mark"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -69,7 +70,7 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             value={formData.city}
             onChange={handleChange}
             placeholder="City"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -81,7 +82,7 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             value={formData.state}
             onChange={handleChange}
             placeholder="State"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>
@@ -93,7 +94,7 @@ const KiranaStoreAddressForm: React.FC<KiranaStoreAddressFormProps> = ({
             value={formData.pinCode}
             onChange={handleChange}
             placeholder="PIN Code"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-kirana-green"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 "
             required
           />
         </div>

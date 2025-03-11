@@ -33,21 +33,31 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="lg:hidden text-white focus:outline-none"
+        className="lg:hidden text-black focus:outline-none"
         onClick={() => setIsMenuOpen((prev) => !prev)}
         aria-label="Toggle Menu"
       >
-        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        {isMenuOpen ? <X size={28} color={'black'} /> : <Menu size={28} color={'black'} />}
       </button>
 
       {/* Slide-in Mobile Menu from Right */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-red-400 transition-transform transform ${
+        className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-red-600 transition-transform transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } lg:translate-x-0 lg:static lg:w-auto lg:bg-transparent lg:flex`}
       >
         <nav className="p-6">
           <ul className="flex flex-col lg:flex-row lg:space-x-6">
+           
+          <li>
+              <Link
+                href="/"
+                className="block py-4 px-6 text-white hover:text-gray-300 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
             <li>
               <Link
                 href="/about"

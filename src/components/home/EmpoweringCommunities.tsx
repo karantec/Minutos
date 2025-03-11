@@ -12,16 +12,17 @@ const EmpoweringCommunities = () => {
         </h2>
 
         <p className="text-xl md:text-2xl text-gray-800 font-medium text-center mt-4">
-          Join us and how you're business 10x
+        We guarantee you're business will grow 10x faster by joining us.
         </p>
 
         <div className="flex justify-center mt-8">
-          <Link href="/signup-form">
-            <button className="bg-red-400 bg-opacity-30 backdrop-blur-lg hover:bg-red-700 hover:bg-opacity-50 text-white text-xl px-6 py-3 rounded-full transition border border-white/20">
-              Sign up
-            </button>
-          </Link>
-        </div>
+  <Link href="/signup-form">
+    <button className="bg-red-600  backdrop-blur-lg hover:bg-red-600  text-white text-xl px-6 py-3 rounded-full transition transform duration-200 ease-in-out border border-white/20 hover:scale-105">
+      Join us for free
+    </button>
+  </Link>
+</div>
+
       </div>
     </section>
   );

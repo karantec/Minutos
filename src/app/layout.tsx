@@ -14,17 +14,17 @@ const inter = Inter({
 
 // Comprehensive metadata configuration
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kiranapro.example.com'), // Replace with your actual domain
+  metadataBase: new URL('https://Minutos.example.com'), // Replace with your actual domain
   title: {
-    template: '%s | KiranaPro - Empowering Retailers',
-    default: 'KiranaPro - Empowering Retailers',
+    template: '%s | Minutos ',
+    default: 'Minutos',
   },
-  description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
-  keywords: ['kirana stores', 'retail transformation', 'digital solutions', 'Indian retail', 'retail growth', 'small business empowerment'],
-  authors: [{ name: 'KiranaPro Team' }],
-  creator: 'KiranaPro',
-  publisher: 'KiranaPro Inc.',
-  applicationName: 'KiranaPro',
+  description: 'Minutos.',
+  keywords: ['Minutos'],
+  authors: [{ name: 'Minutos' }],
+  creator: 'Minutos',
+  publisher: 'Minutos Inc.',
+  applicationName: 'Minutos',
   generator: 'Next.js',
   formatDetection: {
     telephone: true,
@@ -37,16 +37,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://kiranapro.example.com',
-    title: 'KiranaPro - Empowering Retailers',
-    description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
-    siteName: 'KiranaPro',
+    url: 'https://Minutos.example.com',
+    title: 'Minutos',
+    description: 'Minutos.',
+    siteName: 'Minutos',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'KiranaPro - Empowering Retailers',
+        alt: 'Minutos',
       },
     ],
   },
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   // Twitter card metadata
   twitter: {
     card: 'summary_large_image',
-    title: 'KiranaPro - Empowering Retailers',
-    description: 'Transforming traditional Kirana stores with digital solutions and growth strategies.',
-    creator: '@KiranaProApp',
+    title: 'Minutos ',
+    description: 'Minutos.',
+    creator: '@Minutos',
     images: ['/images/twitter-image.jpg'],
   },
   
@@ -79,10 +79,10 @@ export const metadata: Metadata = {
   
   // Add alternate languages if you have multilingual support
   alternates: {
-    canonical: 'https://kiranapro.example.com',
+    canonical: 'https://Minutos.example.com',
     languages: {
-      'en-US': 'https://kiranapro.example.com/en-us',
-      'hi-IN': 'https://kiranapro.example.com/hi-in',
+      'en-US': 'https://Minutos.example.com/en-us',
+      'hi-IN': 'https://Minutos.example.com/hi-in',
       // Add more languages as needed
     },
   },

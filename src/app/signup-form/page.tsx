@@ -86,7 +86,7 @@ const SignupForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-lg p-8 shadow-sm">
+    <div className="max-w-3xl mt-40 mx-auto bg-white rounded-lg p-8 shadow-sm">
       <h1 className="text-2xl font-bold text-center text-gray-800 mb-2">
         Minutos Merchant Signup
       </h1>
