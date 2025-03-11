@@ -11,19 +11,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start col-span-2 sm:col-span-2 md:col-span-1 mb-6 md:mb-0">
-            <div className="bg-green-100 ">
-              <div className="relative w-20 h-20">
-                <Image 
-                  src="/images/icon.png" 
-                  alt="Minutos Logo" 
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
+            
             <div className="hidden md:block mt-4">
-              <p className="text-sm text-white/80">
+              <p className="text-2xl text-white/80">
                 Connecting local stores to digital shoppers across India
               </p>
             </div>
@@ -70,7 +60,7 @@ const Footer: React.FC = () => {
           
           {/* Quick Links and Social Media */}
           <div className="flex flex-col">
-            <h3 className="font-semibold text-lg mb-3 md:mb-4 border-b border-white/20 pb-2">Quick Links</h3>
+          
             
             
             <h3 className="font-semibold text-lg mb-3 md:mb-4 border-b border-white/20 pb-2">Social Media</h3>
