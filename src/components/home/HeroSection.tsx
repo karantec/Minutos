@@ -35,7 +35,7 @@ const HeroSection = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative w-full h-96">
+    <section className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[30rem] xl:h-[80rem]">
       {/* Slides Container */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {slides.map((slide, index) => (
@@ -45,20 +45,23 @@ const HeroSection = () => {
               index === currentSlideIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <Image
-              src={slide.image}
-              alt={`Slide ${index + 1}`}
-              fill
-              className="object-cover object-center"
-              priority={index === 0}
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24">
-              <div className="max-w-2xl">
-                <h1 className="text-white text-2xl sm:text-md md:text-4xl lg:text-5xl font-bold mb-4">
-                  {slide.title || "OTT PLATFORMS AT THE CHEAPEST PRICE!"}
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.image}
+                alt={`Slide ${index + 1}`}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 100vw"
+                className="object-contain sm:object-cover object-center"
+                priority={index === 0}
+              />
+            </div>
+            <div className="absolute inset-0 flex flex-col justify-center items-start p-4 sm:px-8 md:px-16 lg:px-24">
+              <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl">
+                <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4">
+                  {slide.title}
                 </h1>
-                <p className="text-white text-lg sm:text-md md:text-2xl">
-                  {slide.subtitle || "Stream your favorite content with premium subscriptions"}
+                <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl">
+                  {slide.subtitle}
                 </p>
               </div>
             </div>
@@ -67,12 +70,12 @@ const HeroSection = () => {
       </div>
 
       {/* Sliding Indicator Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlideIndex(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
               index === currentSlideIndex ? "bg-white" : "bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
