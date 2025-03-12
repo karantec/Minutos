@@ -125,7 +125,7 @@ const FAQ = () => {
           <p className="text-gray-600 mb-4">
             Still have questions? We're here to help.
           </p>
-          <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700">
+          <Link href="#" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700">
             Contact Support
           </Link>
         </div>
