@@ -2,17 +2,10 @@
 import { useEffect, useState } from "react";
 import HeroSection from "@/components/home/HeroSection";
 import GrowthDrivers from "@/components/home/GrowthDrivers";
-<<<<<<< HEAD
 
 import RetailTransformation from "@/components/home/RetailTransformation";
 import EmpoweringCommunities from "@/components/home/EmpoweringCommunities";
 import Link from "next/link";
-=======
-import RetailTransformation from "@/components/home/RetailTransformation";
-import EmpoweringCommunities from "@/components/home/EmpoweringCommunities";
-import Link from "next/link";
-
->>>>>>> origin/master
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -20,10 +13,6 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div 
@@ -47,20 +36,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <p className="text-white/90 mb-8 text-lg">
             Connecting local stores to digital shoppers across India
           </p>
-<<<<<<< HEAD
          <Link href ="/signup-form"> <button 
             className="px-8 py-4 bg-white text-red-600 font-bold text-lg rounded-lg hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl"
           >
             Join us for free
           </button>
-=======
-         <Link href="/signup-form"> 
-           <button 
-              className="px-8 py-4 bg-white text-red-600 font-bold text-lg rounded-lg hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Join us for free
-            </button>
->>>>>>> origin/master
           </Link>
         </div>
       </div>
@@ -68,7 +48,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   );
 };
 
-<<<<<<< HEAD
 
 
 export default function HomePage() {
@@ -83,20 +62,6 @@ export default function HomePage() {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       
       <main className="flex-1">
-=======
-export default function HomePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  useEffect(() => {
-    setIsModalOpen(true); // Open modal when page loads
-  }, []);
-  
-  return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden">
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      
-      <main className="flex-1 overflow-x-hidden">
->>>>>>> origin/master
         <HeroSection />
         <EmpoweringCommunities />
         <RetailTransformation />
@@ -104,8 +69,4 @@ export default function HomePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
