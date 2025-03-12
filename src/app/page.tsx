@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import HeroSection from "@/components/home/HeroSection";
 import GrowthDrivers from "@/components/home/GrowthDrivers";
-
 import RetailTransformation from "@/components/home/RetailTransformation";
 import EmpoweringCommunities from "@/components/home/EmpoweringCommunities";
 import Link from "next/link";
+
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -36,11 +36,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <p className="text-white/90 mb-8 text-lg">
             Connecting local stores to digital shoppers across India
           </p>
-         <Link href ="/signup-form"> <button 
-            className="px-8 py-4 bg-white text-red-600 font-bold text-lg rounded-lg hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl"
-          >
-            Join us for free
-          </button>
+         <Link href="/signup-form"> 
+           <button 
+              className="px-8 py-4 bg-white text-red-600 font-bold text-lg rounded-lg hover:bg-red-50 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Join us for free
+            </button>
           </Link>
         </div>
       </div>
@@ -48,20 +49,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   );
 };
 
-
-
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
   useEffect(() => {
     setIsModalOpen(true); // Open modal when page loads
   }, []);
-
+  
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       
-      <main className="flex-1">
+      <main className="flex-1 overflow-x-hidden">
         <HeroSection />
         <EmpoweringCommunities />
         <RetailTransformation />

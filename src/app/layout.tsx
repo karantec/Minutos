@@ -124,7 +124,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased overflow-x-hidden`}>
         {/* Skip to main content for accessibility */}
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to main content
@@ -132,7 +132,7 @@ export default function RootLayout({
         
         <Header />
         
-        <main id="main-content">
+        <main id="main-content" className="overflow-x-hidden">
           {children}
         </main>
         
