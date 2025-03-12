@@ -47,29 +47,25 @@ const RetailTransformation = () => {
 
   return (
     <section className="bg-gradient-to-r from-red-50 to-blue-50 py-12 overflow-hidden">
-      <div className="container mx-auto px-4 overflow-x-hidden">
+      <div className="container mx-auto px-4 overflow-x-auto">
         <h2 className="text-2xl font-bold text-center mb-12 text-red-700">
           Retail Transformation Timeline
         </h2>
         
-        {/* Timeline Progress Bar - with improved responsive layout */}
-        <div className="relative max-w-4xl mx-auto mb-16 px-4">
-          {/* Hidden on small screens, visible on medium and up */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-2 bg-gray-200 transform -translate-y-1/2"></div>
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-2 bg-gradient-to-r from-gray-500 via-blue-500 to-green-500 transform -translate-y-1/2"></div>
+        {/* Timeline Progress Bar - horizontal on all screen sizes */}
+        <div className="relative max-w-4xl mx-auto mb-16 px-4 min-w-full sm:min-w-0">
+          {/* Horizontal progress bar for all screen sizes */}
+          <div className="absolute top-1/2 left-0 right-0 h-2 bg-gray-200 transform -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-0 w-full h-2 bg-gradient-to-r from-gray-500 via-blue-500 to-green-500 transform -translate-y-1/2"></div>
           
-          {/* Visible on small screens, hidden on medium and up */}
-          <div className="md:hidden absolute top-0 bottom-0 left-1/2 w-2 bg-gray-200 transform -translate-x-1/2"></div>
-          <div className="md:hidden absolute top-0 h-full w-2 bg-gradient-to-b from-gray-500 via-blue-500 to-green-500 transform -translate-x-1/2 left-1/2"></div>
-          
-          {/* Responsive layout that changes from vertical to horizontal based on screen size */}
-          <div className="relative flex flex-col md:flex-row md:justify-between space-y-12 md:space-y-0">
+          {/* Always horizontal layout with improved spacing for mobile */}
+          <div className="relative flex flex-row justify-between">
             {stages.map((stage, index) => (
-              <div key={index} className="flex md:flex-col items-center">
+              <div key={index} className="flex flex-col items-center" style={{ minWidth: '80px' }}>
                 <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center shadow-lg z-10 ${stage.iconClass}`}>
                   {stage.icon}
                 </div>
-                <p className="ml-4 md:ml-0 md:mt-4 font-bold text-sm md:text-base text-left md:text-center">
+                <p className="mt-4 font-bold text-xs sm:text-sm md:text-base text-center px-1">
                   {stage.name}
                 </p>
               </div>
