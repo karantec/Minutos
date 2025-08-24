@@ -34,8 +34,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/return" className="hover:underline text-white/80 hover:text-white transition-colors duration-200 text-sm md:text-base">
-                  Return Policy
+                <Link href="/cancellation" className="hover:underline text-white/80 hover:text-white transition-colors duration-200 text-sm md:text-base">
+                  Cancellation 
+                </Link>
+              </li>
+              <li>
+                <Link href="/refund" className="hover:underline text-white/80 hover:text-white transition-colors duration-200 text-sm md:text-base">
+                  Refund
                 </Link>
               </li>
             </ul>
